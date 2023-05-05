@@ -1,0 +1,137 @@
+import { Container, Fab, Grid } from '@mui/material';
+import React from 'react';
+import Card from "./Card";
+
+const Horo = () => {
+  return (
+    <Container>
+      <Grid container>
+       <Grid item xs={12} mb={2} mt={2}>
+          <Card
+            direction={"row"}
+            imgWidth={566}
+            imgHeight={400}
+            mycolor={"black"}
+            linkSrc={'/'}
+            fontSize={"40px"}
+            imgSrc={'https://cdn.pixabay.com/photo/2023/04/30/14/52/countryside-7960674_960_720.jpg'}
+            heading={"Meu poste"}
+            title={"Transforma-se o amador na coisa amada"}
+            Desc={"Se quiser descobrir esse universo encantador"}
+            author={"Criador: Sangiorgiovba"}
+            EditButton={
+              <Fab
+                size="small"
+                variant="extended"
+                color="success"
+                aria-label="edit"
+               
+              >
+                Editar
+              </Fab>
+            }
+          />
+          </Grid>
+          <Grid item md={3} spacing={1}>
+            <Card
+              direction={"column"}
+              imgWidth={280}
+              imgHeight={220}
+              mycolor={"black"}
+              linkSrc={'/'}
+              fontSize={"18px"}
+              imgSrc={'https://cdn.pixabay.com/photo/2023/04/15/15/16/house-7927916_960_720.jpg'}
+              title={"Transforma-se o amador na coisa amada"}
+              Desc={"Se quiser descobrir esse universo encantador"}
+              EditButton={
+                <Fab
+                  size="small"
+                  variant="extended"
+                  color="success"
+                  aria-label="edit"
+                 
+                >
+                  Editar
+                </Fab>
+              }
+            />
+            </Grid>
+
+            <Grid item md={3} spacing={1}>
+            <Card
+              direction={"column"}
+              imgWidth={280}
+              imgHeight={220}
+              mycolor={"black"}
+              linkSrc={'/'}
+              fontSize={"18px"}
+              imgSrc={'https://cdn.pixabay.com/photo/2023/04/15/15/16/house-7927916_960_720.jpg'}
+              title={"Transforma-se o amador na coisa amada"}
+              Desc={"Se quiser descobrir esse universo encantador"}
+              EditButton={
+                <Fab
+                  size="small"
+                  variant="extended"
+                  color="success"
+                  aria-label="edit"
+                 
+                >
+                  Editar
+                </Fab>
+              }
+            />
+            </Grid>
+            <Grid item md={3} spacing={1}>
+            <Card
+              direction={"column"}
+              imgWidth={280}
+              imgHeight={220}
+              mycolor={"black"}
+              linkSrc={'/'}
+              fontSize={"18px"}
+              imgSrc={'https://cdn.pixabay.com/photo/2023/04/15/15/16/house-7927916_960_720.jpg'}
+              title={"Transforma-se o amador na coisa amada"}
+              Desc={"Se quiser descobrir esse universo encantador"}
+              EditButton={
+                <Fab
+                  size="small"
+                  variant="extended"
+                  color="success"
+                  aria-label="edit"
+                 
+                >
+                  Editar
+                </Fab>
+              }
+            />
+            </Grid>
+            <Grid item md={3} spacing={1}>
+            <Card
+              direction={"column"}
+              imgWidth={280}
+              imgHeight={220}
+              mycolor={"black"}
+              linkSrc={'/'}
+              fontSize={"18px"}
+              imgSrc={'https://cdn.pixabay.com/photo/2023/04/15/15/16/house-7927916_960_720.jpg'}
+              title={"Transforma-se o amador na coisa amada"}
+              Desc={"Se quiser descobrir esse universo encantador"}
+              EditButton={
+                <Fab
+                  size="small"
+                  variant="extended"
+                  color="success"
+                  aria-label="edit"
+                 
+                >
+                  Editar
+                </Fab>
+              }
+            />
+            </Grid>
+
+          </Grid>
+    </Container>
+  );
+};
+export default Horo;

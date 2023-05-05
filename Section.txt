@@ -1,0 +1,233 @@
+import { Box,Container,Fab,Grid,Typography,styled } from '@mui/material';
+import React from 'react';
+import Card from './Card';
+
+
+
+
+const StyledContainer = styled(Box)(
+    ({mycolor,mybgcolor,myheight,mywidht})=>({
+        color:mycolor,
+        background:mybgcolor,
+        height:myheight,
+        width:mywidht
+    })
+);
+
+const StyledBox = styled(Box)({
+    display:"flex",
+    flexDirection:"row",
+    justifyContent:"center",
+    alignItems:"center",
+    padding:"20px 20px 10px 0px",
+});
+
+
+
+const Section = () => {
+  return (
+    <>
+     <StyledContainer
+            mybgcolor={"DarkCyan"}
+            mycolor={"white"}
+            mywidth="100%"
+          >
+            <Container>
+              <StyledBox>
+                <Box flex={1}>
+                  <Typography
+                    sx={{
+                      textTransform: "capitalize",
+                      borderBottom: "2px solid white",
+                      width: "fit-content",
+                      fontWeight: "bold",
+                    }}
+                  >
+                   
+                  </Typography>
+                </Box>
+                <Box>
+                  <a href="/">Visualizar mais detalhes</a>
+                </Box>
+              </StyledBox>
+              <Grid container>
+                <Grid sm={4}>
+                    <Card
+                        direction={"column"}
+                        imgWidth={350}
+                        imgHeight={300}
+                        mycolor={"white"}
+                        linkSrc={"/"}
+                        imgSrc={'https://cdn.pixabay.com/photo/2023/04/15/15/16/house-7927916_960_720.jpg'}
+                        title={"Transforma-se o amador na coisa amada"}
+                        Desc={"Se quiser descobrir esse universo encantador"}
+                        EditButton={
+                        <Fab
+                            size="small"
+                            variant="extended"
+                            color="success"
+                            aria-label="edit"
+                        
+                        >
+                            Editar
+                        </Fab>
+                        }
+                        Button="Button"
+                        ButtonText="BOTAO LER +"
+                    />
+                    </Grid>
+
+                    <Grid sm={4}>
+                    <Card
+                        direction={"column"}
+                        imgWidth={350}
+                        imgHeight={300}
+                        mycolor={"white"}
+                        linkSrc={"/"}
+                        imgSrc={'https://cdn.pixabay.com/photo/2023/04/24/17/48/bird-7948712_960_720.jpg'}
+                        title={"Transforma-se o amador na coisa amada"}
+                        Desc={"Se quiser descobrir esse universo encantador"}
+                        EditButton={
+                        <Fab
+                            size="small"
+                            variant="extended"
+                            color="success"
+                            aria-label="edit"
+                        
+                        >
+                            Editar
+                        </Fab>
+                        }
+                    />
+                    </Grid>
+                    <Grid sm={4}>
+                    <Card
+                        direction={"column"}
+                        imgWidth={350}
+                        imgHeight={300}
+                        mycolor={"white"}
+                        linkSrc={"/"}
+                        imgSrc={'https://cdn.pixabay.com/photo/2023/04/01/20/25/paella-7893063_960_720.jpg'}
+                        title={"Transforma-se o amador na coisa amada"}
+                        Desc={"Se quiser descobrir esse universo encantador"}
+                        EditButton={
+                        <Fab
+                            size="small"
+                            variant="extended"
+                            color="success"
+                            aria-label="edit"
+                        
+                        >
+                            Editar
+                        </Fab>
+                        }
+                    />
+                    </Grid>
+                </Grid>
+            </Container>
+          </StyledContainer>
+
+          <StyledContainer
+            mybgcolor={"black"}
+            mycolor={"white"}
+            mywidth="100%"
+          >
+            <Container>
+              <StyledBox>
+                <Box flex={1}>
+                  <Typography
+                    sx={{
+                      textTransform: "capitalize",
+                      borderBottom: "2px solid white",
+                      width: "fit-content",
+                      fontWeight: "bold",
+                    }}
+                  >
+                   
+                  </Typography>
+                </Box>
+                <Box>
+                  <a href="/">Visualizar mais detalhes</a>
+                </Box>
+              </StyledBox>
+              <Grid container>
+                <Grid sm={4}>
+                    <Card
+                        direction={"column"}
+                        imgWidth={350}
+                        imgHeight={300}
+                        mycolor={"white"}
+                        linkSrc={"/"}
+                        imgSrc={'https://cdn.pixabay.com/photo/2023/04/15/15/16/house-7927916_960_720.jpg'}
+                        title={"Transforma-se o amador na coisa amada"}
+                        Desc={"Se quiser descobrir esse universo encantador"}
+                        EditButton={
+                        <Fab
+                            size="small"
+                            variant="extended"
+                            color="success"
+                            aria-label="edit"
+                        
+                        >
+                            Editar
+                        </Fab>
+                        }
+                        Button="Button"
+                        ButtonText="BOTAO LER +"
+                    />
+                    </Grid>
+
+                    <Grid sm={4}>
+                    <Card
+                        direction={"column"}
+                        imgWidth={350}
+                        imgHeight={300}
+                        mycolor={"white"}
+                        linkSrc={"/"}
+                        imgSrc={'https://cdn.pixabay.com/photo/2023/04/24/17/48/bird-7948712_960_720.jpg'}
+                        title={"Transforma-se o amador na coisa amada"}
+                        Desc={"Se quiser descobrir esse universo encantador"}
+                        EditButton={
+                        <Fab
+                            size="small"
+                            variant="extended"
+                            color="success"
+                            aria-label="edit"
+                        
+                        >
+                            Editar
+                        </Fab>
+                        }
+                    />
+                    </Grid>
+                    <Grid sm={4}>
+                    <Card
+                        direction={"column"}
+                        imgWidth={350}
+                        imgHeight={300}
+                        mycolor={"white"}
+                        linkSrc={"/"}
+                        imgSrc={'https://cdn.pixabay.com/photo/2023/04/01/20/25/paella-7893063_960_720.jpg'}
+                        title={"Transforma-se o amador na coisa amada"}
+                        Desc={"Se quiser descobrir esse universo encantador"}
+                        EditButton={
+                        <Fab
+                            size="small"
+                            variant="extended"
+                            color="success"
+                            aria-label="edit"
+                        
+                        >
+                            Editar
+                        </Fab>
+                        }
+                    />
+                    </Grid>
+                </Grid>
+            </Container>
+          </StyledContainer>
+        </>
+    );
+};
+
+export default Section;

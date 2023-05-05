@@ -1,0 +1,178 @@
+import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import {
+  Box,
+  Container,
+  Stack,
+  styled,
+  TextField,
+  Typography,
+} from "@mui/material";
+
+import Link from "next/link";
+import { StyledButton } from "./Card";
+
+
+
+
+const Catlist = [
+  { id: 1, name: "Sobre Nos" },
+  { id: 2, name: "ensaios fotográficos" },
+  { id: 3, name: "Salvando vidas" },
+  { id: 4, name: "Procurar" },
+  { id: 5, name: "livros" },
+  { id: 6, name: "Clima e Energia" },
+  { id: 7, name: "Pessoal" },
+  { id: 8, name: "Educação" },
+  { id: 9, name: "Prevenção de pandemia" },
+  { id: 10, name: "Podcast" },
+  { id: 11, name: "Videos" },
+  { id: 12, name: "Desigualdade, gênero e raça" },
+];
+
+const List = styled("div")({
+  fontWeight: 300,
+  color: "white",
+  marginTop: 20,
+  marginBottom: 70,
+  display: "flex",
+  flexWrap: "wrap",
+  maxWidth: "480px",
+  justifyContent: "center",
+  alignItems: "center",
+});
+const ListItem = styled("a")({
+  margin: "20px 0px 5px 0px",
+  width: "150px",
+  cursor: "pointer",
+});
+
+const LogoTwo = styled("div")({
+  fontWeight: 800,
+  fontSize: "18px",
+  color: "white",
+});
+
+const Footer = () => {
+  return (
+    <Box sx={{ background: "black", height: "100%" }}>
+      <Container>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { sm: "row" },
+            flexWrap: "wrap",
+            paddingTop: "80px",
+          }}
+          >
+          <Stack flex={1} sx={{ marginLeft: 1 }}>
+            <LogoTwo>NEXTJS_13</LogoTwo>
+            <LogoTwo>POR SANGIORGIOVBA</LogoTwo>
+          </Stack>
+          <Stack
+            flexDirection={"row"}
+            sx={{ cursor: "pointer", marginRight: 4 }}
+            >
+            <Instagram color="warning" />
+            <Twitter color="primary" />
+            <Facebook color="primary" />
+          </Stack>
+        </Box>
+        <Stack flexDirection={{ sm: "row" }}>
+          <Box
+            flex={1}
+            mt={8}
+            sx={{
+              borderTop: "0.1px solid white",
+              borderBottom: "0.1px solid white",
+            }}
+            >
+            <List>
+              {Catlist.map((cat) => (
+                <ListItem key={cat.id}>{cat.name}</ListItem>
+              ))}
+            </List>
+          </Box>
+          <Box
+            flex={1}
+            mt={8}
+            sx={{
+              color: "white",
+              borderTop: "0.1px solid white",
+              borderBottom: "0.1px solid white",
+              borderLeft: "0.1px solid white",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            >
+            <Typography>Inscreva-se</Typography>
+
+            <TextField
+              id="standard-basic"
+              variant="standard"
+              color="info"
+              placeholder="Nome"
+              inputProps={{
+                style: {
+                  color: "white",
+                  borderBottom: "2px solid white",
+                  width: "300px",
+                },
+              }}
+            />
+            <TextField
+              id="standard-basic"
+              variant="standard"
+              color="info"
+              placeholder="S_Nome"
+              inputProps={{
+                style: {
+                  color: "white",
+                  borderBottom: "2px solid white",
+                  width: "300px",
+                },
+              }}
+            />
+            <TextField
+              id="standard-basic"
+              variant="standard"
+              color="info"
+              placeholder="Email"
+              inputProps={{
+                style: {
+                  color: "white",
+                  borderBottom: "2px solid white",
+                  width: "300px",
+                },
+              }}
+            />
+
+          <StyledButton sx={{ marginTop: 2 }}>Cadastrar</StyledButton>
+          </Box>
+        </Stack>
+        <Box
+          sx={{
+            color: "gray",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: 3,
+            marginTop: 5,
+          }}
+        >
+          <Typography variant="body1">&copy; sangiorgiovba@gmail.com 2023</Typography>
+
+          <Link href={"/privacy"}>Privacidade</Link>
+
+          <Link href={"/terms"}>Termos de uso</Link>
+
+          <Link href={"/contact"}>Contato</Link>
+        </Box>
+      </Container>
+    </Box>
+  );
+};
+
+export default Footer;

@@ -1,0 +1,104 @@
+import React, { useState } from 'react';
+import { AppBar, Box, Button, Container, IconButton, Stack, styled } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import LoginModal from './LoginModal';
+
+const Menu = styled(Box)({
+    borderBottom:"1px solid black",
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    paddingTop:'2px',
+});
+
+const MenuItem = styled(Button)({
+    fontWeight:"900",
+    fontSize:"12px",
+    marginRight:"2px",
+});
+
+const Logo = styled('div')({
+    fontWeight:"900",
+    color:'green',
+    fontSize:"34px",
+    cursor:'pointer',
+});
+
+const LogoDesc = styled(Box)({
+    fontWeight:"600",
+    color:'blue',
+    fontSize:"12px",
+});
+
+const Navbar = () => {
+
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+  return (
+   <>
+   <Container>
+    <AppBar position='static' color='transparent' elevation={0}>
+        <Menu>
+           <Stack direction={"row"} flex={1}>
+            <Logo>NextJs-13</Logo>
+                <Stack direction={"column"} sx={{ marginLeft: 1, marginTop: 1}}>
+                    <LogoDesc sx={{color:"Magenta"}}>Voce Aprende:</LogoDesc>
+                    <LogoDesc sx={{color:"Magenta"}}>Da Maneira Facil 👍</LogoDesc>
+                </Stack>
+            </Stack>
+            <Stack direction={"row"} m={2}>
+            <MenuItem sx={{ fontSize:'15px' }} color="inherit">Livros</MenuItem>
+            <MenuItem sx={{ fontSize:'15px' }} color="inherit">Videos</MenuItem>
+            <MenuItem sx={{ fontSize:'15px' }} color="inherit">Comentarios Do Ano</MenuItem>
+
+            <MenuItem onClick={handleOpen}  color="inherit"
+                sx={{ 
+                background:"gray" , 
+                marginRight:1, color:"black"}}>
+                    Login
+                </MenuItem>
+
+            <MenuItem onClick={handleOpen} color="inherit" 
+                sx={{
+                    color:"#CD661D",
+                    border: "1px solid #CD661D",
+                    fontWeight:"bold",
+                    marginRight:1,
+                }}
+            >
+                Cadastrar
+
+            </MenuItem>
+
+            <MenuItem color="inherit" 
+                sx={{
+                    color:"Purple",
+                    border: "1px solid Purple",
+                    fontWeight:"bold",
+                }}
+            >
+                Criar Post
+
+            </MenuItem>
+            </Stack>
+            <IconButton size="small" edge="start" color='inherit'>
+                <SearchIcon sx={{fontSize:35, color:"green"}} />
+            </IconButton>
+
+            <IconButton size="small" edge="start" color='inherit'>
+                <MenuOpenIcon sx={{fontSize:35, color:"blue"}} />
+            </IconButton>
+
+        </Menu>
+    </AppBar>
+    <LoginModal open={open} handleClose={handleClose} />
+   </Container>
+   
+   </>
+  );
+};
+
+export default Navbar;
